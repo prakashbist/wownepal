@@ -4,9 +4,15 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
+<<<<<<< HEAD
 * ngo
 * 1.0
  
+=======
+* Quick summary
+* Version
+* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+>>>>>>> 05c420fce8be089694e666003922e6331d6c2071
 
 ### How do I get set up? ###
 
@@ -25,4 +31,9 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Who do I talk to? ###
 
+<<<<<<< HEAD
 * Repo owner
+=======
+* Repo owner or admin
+* Other community or team contact
+>>>>>>> 05c420fce8be089694e666003922e6331d6c2071
