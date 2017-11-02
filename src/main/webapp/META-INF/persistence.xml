@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+        http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+    version="2.1">
+	<persistence-unit name="Projection" transaction-type="JTA">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<jta-data-source>java:/jboss/datasources/projectionDS</jta-data-source>
+		<class>com.syntech.model.AbstractLongPKEntity</class>
+		<class>com.syntech.model.AccountAnalysis</class>
+		<class>com.syntech.model.AccountAnalysisNp</class>
+		<class>com.syntech.model.Achead</class>
+		<class>com.syntech.model.Branch</class>
+		<class>com.syntech.model.BranchPointer</class>
+		<class>com.syntech.model.CategoryPointer</class>
+		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+
+
+		<properties>
+			<property name="hibernate.cache.use_second_level_cache" value="false" />
+			<property name="hibernate.show_sql" value="true" />
+<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+		</properties>
+
+
+	</persistence-unit>
+</persistence>
