@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
@@ -37,3 +38,6 @@ This README would normally document whatever steps are necessary to get your app
 * Repo owner or admin
 * Other community or team contact
 >>>>>>> 05c420fce8be089694e666003922e6331d6c2071
+=======
+# wownepal
+>>>>>>> c501333f384e712a87a00b21e024ab8849d62904
