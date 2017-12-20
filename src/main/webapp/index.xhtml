@@ -4,7 +4,9 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:b="http://bootsfaces.net/ui"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui" >
+	
     <h:head>
           
     <meta charset="utf-8" />
@@ -33,7 +35,7 @@
 	    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">WOW Nepal</a>
+        <h:link class="navbar-brand js-scroll-trigger" href="#page-top">WOW Nepal</h:link>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -41,19 +43,19 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <h:link class="nav-link js-scroll-trigger" fragment="services">Services</h:link>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <h:link class="nav-link js-scroll-trigger" fragment="portfolio">Portfolio</h:link>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <h:link class="nav-link js-scroll-trigger" fragment="about">About</h:link>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+              <h:link class="nav-link js-scroll-trigger" fragment="team">Team</h:link>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <h:link class="nav-link js-scroll-trigger" fragment="contact">Contact</h:link>
             </li>
           </ul>
         </div>
@@ -66,7 +68,7 @@
         <div class="intro-text">
           <div class="intro-lead-in">Welcome To WOW Nepal!</div>
           <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">See More</a>
+          <h:link class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" fragment="services">See More</h:link>
         </div>
       </div>
     </header>
@@ -109,6 +111,8 @@
       </div>
     </section>
 
+
+    
     <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
       <div class="container">
@@ -120,13 +124,16 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-6 portfolio-item">
-          <h:link class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+          
+            <h:link class="portfolio-link">
+              <f:passThroughAttribute name="data-toggle" value="modal" />
+              <f:passThroughAttribute name="data-target" value="#portfolioModal1" />
               <div class="portfolio-hover" >
                 <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <h:graphicImage class="img-fluid" value="resources/master/img/portfolio/01-thumbnail.jpg" alt="Slider two"/>
+              <h:graphicImage class="img-fluid" value="resources/img/public/portfolio/Portfolio01.jpg" alt=""/>
             </h:link>
             <div class="portfolio-caption">
               <h4>Threads</h4>
@@ -134,13 +141,15 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
-             <h:link class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+             <h:link class="portfolio-link">
+              <f:passThroughAttribute name="data-toggle" value="modal" />
+              <f:passThroughAttribute name="data-target" value="#portfolioModal2" />
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-             <h:graphicImage class="img-fluid" value="resources/master/img/portfolio/02-thumbnail.jpg" alt="Slider two"/>
+             <h:graphicImage class="img-fluid" value="resources/img/public/portfolio/Portfolio02.jpg" alt=""/>
             </h:link>
             <div class="portfolio-caption">
               <h4>Explore</h4>
@@ -148,59 +157,67 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-6 portfolio-item">
-             <h:link class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <h:link class="portfolio-link">
+              <f:passThroughAttribute name="data-toggle" value="modal" />
+              <f:passThroughAttribute name="data-target" value="#portfolioModal3" />
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <h:graphicImage class="img-fluid" value="resources/master/img/portfolio/03-thumbnail.jpg" alt="Slider two"/>
+              <h:graphicImage class="img-fluid" value="resources/img/public/portfolio/Portfolio03.jpg" alt=""/>
             </h:link>
             <div class="portfolio-caption">
               <h4>Finish</h4>
               <p class="text-muted">Identity</p>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <h:link class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-              <div class="portfolio-hover">
+           <div class="col-md-4 col-sm-6 portfolio-item">
+          <h:link class="portfolio-link">
+              <f:passThroughAttribute name="data-toggle" value="modal" />
+              <f:passThroughAttribute name="data-target" value="#portfolioModal4" />
+              <div class="portfolio-hover" >
                 <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <h:graphicImage class="img-fluid" src="resources/master/img/portfolio/04-thumbnail.jpg" alt=""/>
-              </h:link>
+              <h:graphicImage class="img-fluid" value="resources/img/public/portfolio/Portfolio04.jpg" alt=""/>
+            </h:link>
             <div class="portfolio-caption">
-              <h4>Lines</h4>
-              <p class="text-muted">Branding</p>
+              <h4>Threads</h4>
+              <p class="text-muted">Illustration</p>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <h:link class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-              <div class="portfolio-hover">
+           <div class="col-md-4 col-sm-6 portfolio-item">
+             <h:link class="portfolio-link">
+              <f:passThroughAttribute name="data-toggle" value="modal" />
+              <f:passThroughAttribute name="data-target" value="#portfolioModal5" />
+              <div class="portfolio-hover" >
                 <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <h:graphicImage class="img-fluid" src="resources/master/img/portfolio/05-thumbnail.jpg" alt=""/>
-              </h:link>
+              <h:graphicImage class="img-fluid" value="resources/img/public/portfolio/Portfolio05.jpg" alt=""/>
+            </h:link>
             <div class="portfolio-caption">
-              <h4>Southwest</h4>
-              <p class="text-muted">Website Design</p>
+              <h4>Threads</h4>
+              <p class="text-muted">Illustration</p>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <h:link class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-              <div class="portfolio-hover">
+           <div class="col-md-4 col-sm-6 portfolio-item">
+           <h:link class="portfolio-link">
+              <f:passThroughAttribute name="data-toggle" value="modal" />
+              <f:passThroughAttribute name="data-target" value="#portfolioModal6" />
+              <div class="portfolio-hover" >
                 <div class="portfolio-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <h:graphicImage class="img-fluid" src="resources/master/img/portfolio/06-thumbnail.jpg" alt=""/>
-              </h:link>
+              <h:graphicImage class="img-fluid" value="resources/img/public/portfolio/Portfolio06.jpg" alt=""/>
+            </h:link>
             <div class="portfolio-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
+              <h4>Threads</h4>
+              <p class="text-muted">Illustration</p>
             </div>
           </div>
         </div>
@@ -221,7 +238,7 @@
             <ul class="timeline">
               <li>
                 <div class="timeline-image">
-                 <h:graphicImage class="rounded-circle img-fluid" src="resources/master/img/about/1.jpg" alt=""/>
+                 <h:graphicImage class="rounded-circle img-fluid" value="resources/img/public/about/1.jpg" alt=""/>
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -235,7 +252,7 @@
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-				  <h:graphicImage class="rounded-circle img-fluid" src="resources/master/img/about/2.jpg" alt=""/>
+                  <h:graphicImage class="rounded-circle img-fluid" value="resources/img/public/about/2.jpg" alt=""/>
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -249,7 +266,7 @@
               </li>
               <li>
                 <div class="timeline-image">
-                  <h:graphicImage class="rounded-circle img-fluid" src="resources/master/img/about/3.jpg" alt=""/>
+                 <h:graphicImage class="rounded-circle img-fluid" value="resources/img/public/about/3.jpg" alt=""/>
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -263,7 +280,7 @@
               </li>
               <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <h:graphicImage class="rounded-circle img-fluid" src="resources/master/img/about/4.jpg" alt=""/>
+                 <h:graphicImage class="rounded-circle img-fluid" value="resources/img/public/about/4.jpg" alt=""/>
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -300,22 +317,22 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="team-member">
-              <h:graphicImage class="mx-auto rounded-circle" src="resources/master/img/team/1.jpg" alt=""/>
-              <h4>Kay Garland</h4>
-              <p class="text-muted">Lead Designer</p>
+              <h:graphicImage class="mx-auto rounded-circle" value="resources/img/public/team/1.jpg" alt=""/>
+              <h4>Prakash Bist</h4>
+              <p class="text-muted">Lead Designer/Developer</p>
               <ul class="list-inline social-buttons">
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://twitter.com/DaCronical">
                     <i class="fa fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://www.facebook.com/status400">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/prakash-bist-662592120/">
                     <i class="fa fa-linkedin"></i>
                   </a>
                 </li>
@@ -324,7 +341,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <h:graphicImage class="mx-auto rounded-circle" src="resources/master/img/team/2.jpg" alt=""/>
+              <h:graphicImage class="mx-auto rounded-circle" value="resources/img/public/team/2.jpg" alt=""/>
               <h4>Larry Parker</h4>
               <p class="text-muted">Lead Marketer</p>
               <ul class="list-inline social-buttons">
@@ -348,7 +365,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <h:graphicImage class="mx-auto rounded-circle" src="resources/master/img/team/3.jpg" alt=""/>
+              <h:graphicImage class="mx-auto rounded-circle" value="resources/img/public/team/3.jpg" alt=""/>
               <h4>Diana Pertersen</h4>
               <p class="text-muted">Lead Developer</p>
               <ul class="list-inline social-buttons">
@@ -385,23 +402,23 @@
         <div class="row">
           <div class="col-md-3 col-sm-6">
             <h:link href="#">
-              <h:graphicImage class="img-fluid d-block mx-auto" src="resources/master/img/logos/envato.jpg" alt=""/>
+               <h:graphicImage class="img-fluid d-block mx-auto" value="resources/img/public/logos/envato.jpg" alt=""/>
             </h:link>
           </div>
           <div class="col-md-3 col-sm-6">
             <h:link href="#">
-              <h:graphicImage class="img-fluid d-block mx-auto" src="resources/master/img/logos/designmodo.jpg" alt=""/>
-            </h:link>>
+              <h:graphicImage class="img-fluid d-block mx-auto" value="resources/img/public/logos/designmodo.jpg" alt=""/>
+            </h:link>
           </div>
           <div class="col-md-3 col-sm-6">
             <h:link href="#">
-              <h:graphicImage class="img-fluid d-block mx-auto" src="resources/master/img/logos/themeforest.jpg" alt=""/>
-            </h:link>>
+              <h:graphicImage class="img-fluid d-block mx-auto" value="resources/img/public/logos/themeforest.jpg" alt=""/>
+            </h:link>
           </div>
           <div class="col-md-3 col-sm-6">
             <h:link href="#">
-              <h:graphicImage class="img-fluid d-block mx-auto" src="resources/master/img/logos/creative-market.jpg" alt=""/>
-            </h:link>>
+              <h:graphicImage class="img-fluid d-block mx-auto" value="resources/img/public/logos/creative-market.jpg" alt=""/>
+            </h:link>
           </div>
         </div>
       </div>
@@ -510,7 +527,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <h:graphicImage class="img-fluid d-block mx-auto" src="resources/master/img/portfolio/01-full.jpg" alt=""/>
+                  <h:graphicImage class="img-fluid d-block mx-auto" value="resources/img/public/portfolio/01-full.jpg" alt=""/>
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -544,7 +561,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <h:graphicImage class="img-fluid d-block mx-auto" src="resources/master/img/portfolio/02-full.jpg" alt=""/>
+                  <h:graphicImage class="img-fluid d-block mx-auto" value="resources/img/public/portfolio/02-full.jpg" alt=""/>
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -578,7 +595,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <h:graphicImage class="img-fluid d-block mx-auto" src="resources/master/img/portfolio/03-full.jpg" alt=""/>
+                  <h:graphicImage class="img-fluid d-block mx-auto" value="resources/img/public/portfolio/03-full.jpg" alt=""/>
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -612,7 +629,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <h:graphicImage class="img-fluid d-block mx-auto" src="resources/master/img/portfolio/04-full.jpg" alt=""/>
+                  <h:graphicImage class="img-fluid d-block mx-auto" value="resources/img/public/portfolio/04-full.jpg" alt=""/>
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -646,7 +663,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <h:graphicImage class="img-fluid d-block mx-auto" src="resources/master/img/portfolio/05-full.jpg" alt=""/>
+                  <h:graphicImage class="img-fluid d-block mx-auto" value="resources/img/public/portfolio/05-full.jpg" alt=""/>
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -680,7 +697,7 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <h:graphicImage class="img-fluid d-block mx-auto" src="resources/master/img/portfolio/06-full.jpg" alt=""/>
+                  <h:graphicImage class="img-fluid d-block mx-auto" value="resources/img/public/portfolio/06-full.jpg" alt=""/>
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
@@ -700,19 +717,19 @@
 	    
 	  
 	
-	<h:outputScript library="js" name="master/vendor/jquery/jquery.min.js" />
+	<h:outputScript library="js" name="jquery.min.js" />
 	
-	<h:outputScript library="js" name="master/vendor/bootstrap/js/bootstrap.bundle.min.js" />
+	<h:outputScript library="js" name="bootstrap.bundle.min.js" />
 	
     <!-- Plugin JavaScript -->
-    <h:outputScript library="js" name="master/vendor/jquery-easing/jquery.easing.min.js" />
+    <h:outputScript library="js" name="jquery.easing.js" />
     
     <!-- Contact form JavaScript -->
-    <script src="master/js/jqBootstrapValidation.js"></script>
-    <script src="master/js/contact_me.js"></script>
+    <script src="jqBootstrapValidation.js"></script>
+    <script src="contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="master/js/agency.min.js"></script>
+    <script src="agency.js"></script>
         
     </h:body>
 </html>
